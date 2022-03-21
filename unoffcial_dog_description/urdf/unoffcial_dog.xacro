@@ -1,0 +1,688 @@
+<?xml version="1.0" ?>
+<robot name="unoffcial_dog" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find unoffcial_dog_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find unoffcial_dog_description)/urdf/unoffcial_dog.trans" />
+<xacro:include filename="$(find unoffcial_dog_description)/urdf/unoffcial_dog.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.30031866605464624 0.0488302386913517 0.25974219951421007"/>
+    <mass value="0.2606887362516945"/>
+    <inertia ixx="0.002843" ixy="6e-06" ixz="-0.0" iyy="0.000543" iyz="-1.6e-05" izz="0.002868"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_left_thigh_servo_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.021539932675100126 -0.00984964533422189 1.4821927035890692e-05"/>
+    <mass value="0.25516561316087144"/>
+    <inertia ixx="4.4e-05" ixy="-0.0" ixz="0.0" iyy="4.3e-05" iyz="0.0" izz="7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.240767 -0.14985 -0.255017"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_left_thigh_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.240767 -0.14985 -0.255017"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_left_thigh_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_left_knee_servo__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.02154178489538669 -0.009846250952893237 -1.5704260949100934e-05"/>
+    <mass value="0.25516561316087183"/>
+    <inertia ixx="4.4e-05" ixy="0.0" ixz="0.0" iyy="4.3e-05" iyz="-0.0" izz="7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.212767 -0.149853 -0.254997"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_left_knee_servo__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.212767 -0.149853 -0.254997"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_left_knee_servo__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_left_InnerHip_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.02252999341411238 -0.03294437633347036 -3.5237842516799844e-05"/>
+    <mass value="0.033152736768248585"/>
+    <inertia ixx="1.8e-05" ixy="2e-06" ixz="0.0" iyy="1.8e-05" iyz="-0.0" izz="2.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.259769 -0.173896 -0.25503"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_left_InnerHip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.259769 -0.173896 -0.25503"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_left_InnerHip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_left_thigh_link_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.010024360190487247 0.04257767261209694 -0.026017059842814994"/>
+    <mass value="0.07793248271306506"/>
+    <inertia ixx="0.000122" ixy="-5e-06" ixz="3e-06" iyy="3.4e-05" iyz="5.3e-05" izz="8.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.236967 -0.149851 -0.255014"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_left_thigh_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.236967 -0.149851 -0.255014"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_left_thigh_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_left_knee_link_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.002878633158485494 -0.029094796594651612 -0.04254961489356526"/>
+    <mass value="0.09455286210059435"/>
+    <inertia ixx="0.000198" ixy="0.0" ixz="0.0" iyy="0.000135" iyz="-9.1e-05" izz="6.4e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.222522 -0.255213 -0.190588"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_left_knee_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.222522 -0.255213 -0.190588"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_left_knee_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_left_adduction_servo_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.004565263663396879 0.011690577948047537 -0.024985588171213602"/>
+    <mass value="0.25516561316087166"/>
+    <inertia ixx="7e-05" ixy="0.0" ixz="0.0" iyy="4.4e-05" iyz="-0.0" izz="4.3e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.255378 -0.187546 -0.289862"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_left_adduction_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.255378 -0.187546 -0.289862"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_left_adduction_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_right_InnerHip__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.02252396679275276 -0.035950488465180674 -3.571377814287624e-05"/>
+    <mass value="0.0331527367682486"/>
+    <inertia ixx="1.8e-05" ixy="-2e-06" ixz="-0.0" iyy="1.8e-05" iyz="-0.0" izz="2.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.340982 -0.173888 -0.255205"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_right_InnerHip__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.340982 -0.173888 -0.255205"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_right_InnerHip__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_right_thigh_servo__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.021542130039575724 -0.009846247320946994 1.534599140984305e-05"/>
+    <mass value="0.25516561316087144"/>
+    <inertia ixx="4.4e-05" ixy="0.0" ixz="-0.0" iyy="4.3e-05" iyz="0.0" izz="7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.35998 -0.146837 -0.255191"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_right_thigh_servo__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.35998 -0.146837 -0.255191"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_right_thigh_servo__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_right_knee_servo___1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.021539587530909232 -0.009849641702402906 -1.5180196574704485e-05"/>
+    <mass value="0.2551656131608718"/>
+    <inertia ixx="4.4e-05" ixy="-0.0" ixz="-0.0" iyy="4.3e-05" iyz="-0.0" izz="7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.38798 -0.146834 -0.255171"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_right_knee_servo___1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.38798 -0.146834 -0.255171"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_right_knee_servo___1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_right_thigh_link__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.010031625993058346 0.042577039016908014 -0.026016795735303827"/>
+    <mass value="0.07793276693390058"/>
+    <inertia ixx="0.000122" ixy="5e-06" ixz="-3e-06" iyy="3.4e-05" iyz="5.3e-05" izz="8.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.36378 -0.146836 -0.255188"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_right_thigh_link__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.36378 -0.146836 -0.255188"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_right_thigh_link__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_right_knee_link__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.002873929111916529 -0.029096075847931224 -0.04254909082918337"/>
+    <mass value="0.09455286210059435"/>
+    <inertia ixx="0.000198" ixy="-0.0" ixz="-0.0" iyy="0.000135" iyz="-9.1e-05" izz="6.4e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.378243 -0.252197 -0.190762"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_right_knee_link__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.378243 -0.252197 -0.190762"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_right_knee_link__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_right_adduction_servo__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.005434466620742817 0.011690303102358995 -0.02481106410683942"/>
+    <mass value="0.2551656131608718"/>
+    <inertia ixx="7e-05" ixy="-0.0" ixz="-0.0" iyy="4.4e-05" iyz="-0.0" izz="4.3e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.335378 -0.187539 -0.289862"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_right_adduction_servo__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.335378 -0.187539 -0.289862"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/back_right_adduction_servo__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_InnerHip__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.022530563781380353 -0.03326145347802484 -3.5237842538504704e-05"/>
+    <mass value="0.033152736768248585"/>
+    <inertia ixx="1.8e-05" ixy="2e-06" ixz="0.0" iyy="1.8e-05" iyz="-0.0" izz="2.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.259752 0.021104 -0.25503"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/front_left_InnerHip__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.259752 0.021104 -0.25503"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/front_left_InnerHip__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_knee_servo___1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.02154135526265502 -0.009846328097448169 -1.570426097058375e-05"/>
+    <mass value="0.25516561316087183"/>
+    <inertia ixx="4.4e-05" ixy="0.0" ixz="0.0" iyy="4.3e-05" iyz="-0.0" izz="7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.212749 0.045464 -0.254997"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/front_left_knee_servo___1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.212749 0.045464 -0.254997"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/front_left_knee_servo___1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_thigh_servo__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.02154036230783196 -0.009849722478776607 1.4821927014296854e-05"/>
+    <mass value="0.25516561316087144"/>
+    <inertia ixx="4.4e-05" ixy="-0.0" ixz="0.0" iyy="4.3e-05" iyz="0.0" izz="7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.240749 0.045467 -0.255017"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/front_left_thigh_servo__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.240749 0.045467 -0.255017"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/front_left_thigh_servo__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_thigh_link__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.010023930557755384 0.04257859546754338 -0.026017059842834228"/>
+    <mass value="0.07793248271306506"/>
+    <inertia ixx="0.000122" ixy="-5e-06" ixz="3e-06" iyy="3.4e-05" iyz="5.3e-05" izz="8.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.236949 0.045467 -0.255014"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/front_left_thigh_link__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.236949 0.045467 -0.255014"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/front_left_thigh_link__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_knee_link__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0028792035257533544 -0.029094873739200923 -0.042549614893582166"/>
+    <mass value="0.09455286210059435"/>
+    <inertia ixx="0.000198" ixy="0.0" ixz="0.0" iyy="0.000135" iyz="-9.1e-05" izz="6.4e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.222505 -0.059896 -0.190588"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/front_left_knee_link__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.222505 -0.059896 -0.190588"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/front_left_knee_link__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_adduction_servo_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.004565721819880242 0.011690578737063306 -0.024985588171235695"/>
+    <mass value="0.25516561316087166"/>
+    <inertia ixx="7e-05" ixy="0.0" ixz="0.0" iyy="4.4e-05" iyz="-0.0" izz="4.3e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.25536 0.007454 -0.289862"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/front_left_adduction_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.25536 0.007454 -0.289862"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/front_left_adduction_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_right_innerHip_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.02252369538938387 -0.03294419997402807 -3.5713778164248033e-05"/>
+    <mass value="0.0331527367682486"/>
+    <inertia ixx="1.8e-05" ixy="-2e-06" ixz="-0.0" iyy="1.8e-05" iyz="-0.0" izz="2.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.340965 0.021112 -0.255205"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/front_right_innerHip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.340965 0.021112 -0.255205"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/front_right_innerHip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="_front_right_high_servo_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.02154140144294514 -0.009845958829793978 1.5345991388360236e-05"/>
+    <mass value="0.25516561316087144"/>
+    <inertia ixx="4.4e-05" ixy="0.0" ixz="-0.0" iyy="4.3e-05" iyz="0.0" izz="7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.359962 0.045157 -0.255191"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/_front_right_high_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.359962 0.045157 -0.255191"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/_front_right_high_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="_front_right_knee_servo__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.021540316127541925 -0.009849353211249627 -1.5180196596076279e-05"/>
+    <mass value="0.2551656131608718"/>
+    <inertia ixx="4.4e-05" ixy="-0.0" ixz="-0.0" iyy="4.3e-05" iyz="-0.0" izz="7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.387962 0.04516 -0.255171"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/_front_right_knee_servo__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.387962 0.04516 -0.255171"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/_front_right_knee_servo__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_right_thigh_link_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.010032354589690595 0.04257632750805948 -0.026016795735325587"/>
+    <mass value="0.07793276693390058"/>
+    <inertia ixx="0.000122" ixy="5e-06" ixz="-3e-06" iyy="3.4e-05" iyz="5.3e-05" izz="8.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.363762 0.045157 -0.255188"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/front_right_thigh_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.363762 0.045157 -0.255188"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/front_right_thigh_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_right_knee_link_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0028736577085497483 -0.02909578735678014 -0.04254909082920519"/>
+    <mass value="0.09455286210059435"/>
+    <inertia ixx="0.000198" ixy="-0.0" ixz="-0.0" iyy="0.000135" iyz="-9.1e-05" izz="6.4e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.378226 -0.060203 -0.190762"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/front_right_knee_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.378226 -0.060203 -0.190762"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/front_right_knee_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_right_adduction_Servo_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0054349247772262355 0.011690303891375195 -0.02481106410686129"/>
+    <mass value="0.2551656131608718"/>
+    <inertia ixx="7e-05" ixy="-0.0" ixz="-0.0" iyy="4.4e-05" iyz="-0.0" izz="4.3e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.33536 0.007461 -0.289862"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/front_right_adduction_Servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.33536 0.007461 -0.289862"/>
+    <geometry>
+      <mesh filename="package://unoffcial_dog_description/meshes/front_right_adduction_Servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="left_back_fixed_thigh_servo" type="fixed">
+  <origin rpy="0 0 0" xyz="0.019002 -0.024046 -1.3e-05"/>
+  <parent link="back_left_InnerHip_1"/>
+  <child link="back_left_thigh_servo_1"/>
+</joint>
+
+<joint name="left_back_fixed_knee_servo" type="fixed">
+  <origin rpy="0 0 0" xyz="0.047002 -0.024043 -3.3e-05"/>
+  <parent link="back_left_InnerHip_1"/>
+  <child link="back_left_knee_servo__1"/>
+</joint>
+
+<joint name="left_back_adduction_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.004391 -0.01365 -0.034832"/>
+  <parent link="back_left_adduction_servo_1"/>
+  <child link="back_left_InnerHip_1"/>
+  <axis xyz="9e-05 -1.0 -0.0"/>
+</joint>
+
+<joint name="left_back_thigh_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0038 1e-06 -3e-06"/>
+  <parent link="back_left_thigh_servo_1"/>
+  <child link="back_left_thigh_link_1"/>
+  <axis xyz="1.0 9e-05 -0.000711"/>
+</joint>
+
+<joint name="left_back_knee_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="0.014445 0.105362 -0.064426"/>
+  <parent link="back_left_thigh_link_1"/>
+  <child link="back_left_knee_link_1"/>
+  <axis xyz="1.0 9e-05 -0.000711"/>
+</joint>
+
+<joint name="frame_left_back" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.255378 0.187546 0.289862"/>
+  <parent link="base_link"/>
+  <child link="back_left_adduction_servo_1"/>
+</joint>
+
+<joint name="right_back_adduction_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.005604 -0.013651 -0.034657"/>
+  <parent link="back_right_adduction_servo__1"/>
+  <child link="back_right_InnerHip__1"/>
+  <axis xyz="-9e-05 1.0 0.0"/>
+</joint>
+
+<joint name="right_back_thigh_servo" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.018998 -0.027051 -1.4e-05"/>
+  <parent link="back_right_InnerHip__1"/>
+  <child link="back_right_thigh_servo__1"/>
+</joint>
+
+<joint name="right_back_knee_servo" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.046998 -0.027054 -3.4e-05"/>
+  <parent link="back_right_InnerHip__1"/>
+  <child link="back_right_knee_servo___1"/>
+</joint>
+
+<joint name="right_back_thigh_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.0038 -1e-06 -3e-06"/>
+  <parent link="back_right_thigh_servo__1"/>
+  <child link="back_right_thigh_link__1"/>
+  <axis xyz="1.0 9e-05 0.000711"/>
+</joint>
+
+<joint name="right_back_knee_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.014463 0.105361 -0.064426"/>
+  <parent link="back_right_thigh_link__1"/>
+  <child link="back_right_knee_link__1"/>
+  <axis xyz="1.0 9e-05 0.000711"/>
+</joint>
+
+<joint name="frame_right_back" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.335378 0.187539 0.289862"/>
+  <parent link="base_link"/>
+  <child link="back_right_adduction_servo__1"/>
+</joint>
+
+<joint name="left_front_adduction_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.004392 -0.01365 -0.034832"/>
+  <parent link="front_left_adduction_servo_1"/>
+  <child link="front_left_InnerHip__1"/>
+  <axis xyz="9e-05 -1.0 -0.0"/>
+</joint>
+
+<joint name="left_front_thigh_servo" type="fixed">
+  <origin rpy="0 0 0" xyz="0.047003 -0.02436 -3.3e-05"/>
+  <parent link="front_left_InnerHip__1"/>
+  <child link="front_left_knee_servo___1"/>
+</joint>
+
+<joint name="left_front_knee_servo" type="fixed">
+  <origin rpy="0 0 0" xyz="0.019003 -0.024363 -1.3e-05"/>
+  <parent link="front_left_InnerHip__1"/>
+  <child link="front_left_thigh_servo__1"/>
+</joint>
+
+<joint name="left_front_thigh_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0038 0.0 -3e-06"/>
+  <parent link="front_left_thigh_servo__1"/>
+  <child link="front_left_thigh_link__1"/>
+  <axis xyz="1.0 9e-05 -0.000711"/>
+</joint>
+
+<joint name="left_front_knee_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="0.014444 0.105363 -0.064426"/>
+  <parent link="front_left_thigh_link__1"/>
+  <child link="front_left_knee_link__1"/>
+  <axis xyz="1.0 9e-05 -0.000711"/>
+</joint>
+
+<joint name="front_left_front" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.25536 -0.007454 0.289862"/>
+  <parent link="base_link"/>
+  <child link="front_left_adduction_servo_1"/>
+</joint>
+
+<joint name="front_right_adduction_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.005605 -0.013651 -0.034657"/>
+  <parent link="front_right_adduction_Servo_1"/>
+  <child link="front_right_innerHip_1"/>
+  <axis xyz="-9e-05 1.0 0.0"/>
+</joint>
+
+<joint name="front_right_thigh_servo" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.018997 -0.024045 -1.4e-05"/>
+  <parent link="front_right_innerHip_1"/>
+  <child link="_front_right_high_servo_1"/>
+</joint>
+
+<joint name="front_right_knee_servo" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.046997 -0.024048 -3.4e-05"/>
+  <parent link="front_right_innerHip_1"/>
+  <child link="_front_right_knee_servo__1"/>
+</joint>
+
+<joint name="front_right_thigh_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.0038 0.0 -3e-06"/>
+  <parent link="_front_right_high_servo_1"/>
+  <child link="front_right_thigh_link_1"/>
+  <axis xyz="1.0 9e-05 0.000711"/>
+</joint>
+
+<joint name="front_right_knee_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.014464 0.10536 -0.064426"/>
+  <parent link="front_right_thigh_link_1"/>
+  <child link="front_right_knee_link_1"/>
+  <axis xyz="1.0 9e-05 0.000711"/>
+</joint>
+
+<joint name="frame_front_right" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.33536 -0.007461 0.289862"/>
+  <parent link="base_link"/>
+  <child link="front_right_adduction_Servo_1"/>
+</joint>
+
+</robot>
