@@ -1,0 +1,55 @@
+unoffcial_dog_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  left_back_adduction_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: left_back_adduction_joint
+    pid: {p: 100, i: 3, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}
+  left_back_thigh_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: left_back_thigh_joint
+    pid: {p: 100, i: 3, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}
+  left_back_knee_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: left_back_knee_joint
+    pid: {p: 100, i: 3, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}
+  right_back_adduction_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: right_back_adduction_joint
+    pid: {p: 100, i: 3, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}
+  right_back_thigh_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: right_back_thigh_joint
+    pid: {p: 100, i: 3, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}
+  right_back_knee_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: right_back_knee_joint
+    pid: {p: 100, i: 3, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}
+  left_front_adduction_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: left_front_adduction_joint
+    pid: {p: 100, i: 3, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}
+  left_front_thigh_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: left_front_thigh_joint
+    pid: {p: 100, i: 3, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}
+  left_front_knee_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: left_front_knee_joint
+    pid: {p: 100, i: 3, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}
+  front_right_adduction_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: front_right_adduction_joint
+    pid: {p: 100, i: 3, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}
+  front_right_thigh_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: front_right_thigh_joint
+    pid: {p: 100, i: 3, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}
+  front_right_knee_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: front_right_knee_joint
+    pid: {p: 100, i: 3, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}

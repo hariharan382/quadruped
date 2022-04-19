@@ -1,0 +1,17 @@
+<launch>
+
+<rosparam file="$(find unoffcial_dog_description)/launch/controller.yaml" command="load"/>
+<rosparam file="$(find unoffcial_dog_description)/launch/joint_states.yaml" command="load"/>
+<!--<param name="tf_prefix" value="unoffcial_dog_controller" />-->
+<node args="left_back_adduction_joint_position_controller left_back_thigh_joint_position_controller left_back_knee_joint_position_controller right_back_adduction_joint_position_controller right_back_thigh_joint_position_controller right_back_knee_joint_position_controller left_front_adduction_joint_position_controller left_front_thigh_joint_position_controller left_front_knee_joint_position_controller front_right_adduction_joint_position_controller front_right_thigh_joint_position_controller front_right_knee_joint_position_controller joint_state_controller " 
+name="controller_spawner" ns="/unoffcial_dog_controller" output="screen" pkg="controller_manager" respawn="false" type="spawner"/>
+
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+  
+<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" output="screen" > 
+	<remap from="/joint_states" to="/unoffcial_dog_controller/joint_states" />
+</node>
+
+<node pkg="rostopic" type="rostopic" name="fake_joint_calibration" args="pub /calibrated std_msgs/Bool true" />
+
+</launch>
