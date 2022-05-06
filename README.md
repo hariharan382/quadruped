@@ -4,6 +4,7 @@ I am Hari haran ,Undergraduate robotics student,budding entrepreneur
 
 My quadrued is still in development
 you can find more on other project http://hariharan.ga/projects/
+watch the video in the above file project.mp4
 
 
 
